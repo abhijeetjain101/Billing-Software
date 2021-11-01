@@ -314,7 +314,7 @@ class Bill_App:
 
     def total(self):
 
-        self.c_s_p =  (self.soap.get()*40)
+        self.c_s_p = (self.soap.get()*40)
         self.fc_p = (self.face_cream.get()*120)
         self.fw_p = (self.face_wash.get()*60)
         self.s_p = (self.spray.get()*180)
@@ -416,43 +416,45 @@ class Bill_App:
             self.welcome_bill()
             # == Cosmetics ==
             if self.soap.get()!= 0:
-                self.txtarea.insert(END,f"\n Bath Soap\t\t{self.soap.get()}\t\t{self.c_s_p}")
+                self.txtarea.insert(END,f"\n Bath Soap\t\t{self.soap.get()}\t   Rs.{self.c_s_p}")
             if self.face_cream.get()!= 0:
-                self.txtarea.insert(END,f"\n Face Cream\t\t{self.face_cream.get()}\t\t{self.fc_p}")
+                self.txtarea.insert(END,f"\n Face Cream\t\t{self.face_cream.get()}\t   Rs.{self.fc_p}")
             if self.face_wash.get()!= 0:
-                self.txtarea.insert(END,f"\n Face Wash\t\t{self.face_wash.get()}\t\t{self.fw_p}")
+                self.txtarea.insert(END,f"\n Face Wash\t\t{self.face_wash.get()}\t   Rs.{self.fw_p}")
+            if self.spray.get()!=0:
+                self.txtarea.insert(END,f"\n Hair Spray\t\t{self.spray.get()}\t   Rs.{self.s_p}")
             if self.gel.get()!= 0:
-                self.txtarea.insert(END,f"\n Hair Spray\t\t{self.gel.get()}\t\t{self.g_p}")
+                self.txtarea.insert(END,f"\n Hair Gel\t\t{self.gel.get()}\t   Rs.{self.g_p}")
             if self.lotion.get()!= 0:
-                self.txtarea.insert(END,f"\n Body Lotion\t\t{self.lotion.get()}\t\t{self.l_p}")
+                self.txtarea.insert(END,f"\n Body Lotion\t\t{self.lotion.get()}\t   Rs.{self.l_p}")
 
             # == Grocery ==
             if self.rice.get()!= 0:
-                self.txtarea.insert(END,f"\n Rice\t\t{self.rice.get()}\t\t{self.r_p}")
+                self.txtarea.insert(END,f"\n Rice\t\t{self.rice.get()}\t   Rs.{self.r_p}")
             if self.food_oil.get()!= 0:
-                self.txtarea.insert(END,f"\n Food Oil\t\t{self.food_oil.get()}\t\t{self.f_p}")
+                self.txtarea.insert(END,f"\n Food Oil\t\t{self.food_oil.get()}\t   Rs.{self.f_p}")
             if self.daal.get()!= 0:
-                self.txtarea.insert(END,f"\n Daal\t\t{self.daal.get()}\t\t{self.d_p}")
+                self.txtarea.insert(END,f"\n Daal\t\t{self.daal.get()}\t   Rs.{self.d_p}")
             if self.wheat.get()!= 0:
-                self.txtarea.insert(END,f"\n Wheat\t\t{self.wheat.get()}\t\t{self.w_p}")
+                self.txtarea.insert(END,f"\n Wheat\t\t{self.wheat.get()}\t   Rs.{self.w_p}")
             if self.sugar.get()!= 0:
-                self.txtarea.insert(END,f"\n Sugar\t\t{self.sugar.get()}\t\t{self.su_p}")
+                self.txtarea.insert(END,f"\n Sugar\t\t{self.sugar.get()}\t   Rs.{self.su_p}")
             if self.tea.get()!= 0:
-                self.txtarea.insert(END,f"\n Tea\t\t{self.tea.get()}\t\t{self.t_p}")
+                self.txtarea.insert(END,f"\n Tea\t\t{self.tea.get()}\t   Rs.{self.t_p}")
 
             # == ColdDrinks ==
             if self.maaza.get()!= 0:
-                self.txtarea.insert(END,f"\n Maaza\t\t{self.maaza.get()}\t\t{self.m_p}")
+                self.txtarea.insert(END,f"\n Maaza\t\t{self.maaza.get()}\t   Rs.{self.m_p}")
             if self.cocacola.get()!= 0:
-                self.txtarea.insert(END,f"\n Cocacola\t\t{self.cocacola.get()}\t\t{self.c_p}")
+                self.txtarea.insert(END,f"\n Cocacola\t\t{self.cocacola.get()}\t   Rs.{self.c_p}")
             if self.frooti.get()!= 0:
-                self.txtarea.insert(END,f"\n Frooti\t\t{self.frooti.get()}\t\t{self.fr_p}")
+                self.txtarea.insert(END,f"\n Frooti\t\t{self.frooti.get()}\t   Rs.{self.fr_p}")
             if self.thumsup.get()!= 0:
-                self.txtarea.insert(END,f"\n ThumsUp\t\t{self.thumsup.get()}\t\t{self.th_p}")
+                self.txtarea.insert(END,f"\n ThumsUp\t\t{self.thumsup.get()}\t   Rs.{self.th_p}")
             if self.limca.get()!= 0:
-                self.txtarea.insert(END,f"\n Limca\t\t{self.limca.get()}\t\t{self.li_p}")
+                self.txtarea.insert(END,f"\n Limca\t\t{self.limca.get()}\t   Rs.{self.li_p}")
             if self.sprite.get()!= 0:
-                self.txtarea.insert(END,f"\n Sprite\t\t{self.sprite.get()}\t\t{self.sp_p}")
+                self.txtarea.insert(END,f"\n Sprite\t\t{self.sprite.get()}\t   Rs.{self.sp_p}")
             pass
 
             self.txtarea.insert(END,f"\n-------------------------------------")
